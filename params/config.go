@@ -95,12 +95,12 @@ var (
 		EIP155Block:             big.NewInt(10),
 		EIP158Block:             big.NewInt(10),
 		ByzantiumBlock:          big.NewInt(20),
-		go-apollyonBlock:           big.NewInt(0),
-		go-apollyonMinerReward:     APYMinerReward,
-		go-apollyonTreasuryAddress: common.HexToAddress("0xbbe8fbeb971d3bc746d2336d1445780b927f0499"),
-		go-apollyonTreasuryReward:  APYTreasuryReward,
-		go-apollyonStakeAddress:    common.HexToAddress("0xe303d661b7814368e0c1372a2619c1a2bea025c3"),
-		go-apollyonStakeReward:     APYStakeReward,
+		apollyonBlock:           big.NewInt(0),
+		apollyonMinerReward:     APYMinerReward,
+		apollyonTreasuryAddress: common.HexToAddress("0xbbe8fbeb971d3bc746d2336d1445780b927f0499"),
+		apollyonTreasuryReward:  APYTreasuryReward,
+		apollyonStakeAddress:    common.HexToAddress("0xe303d661b7814368e0c1372a2619c1a2bea025c3"),
+		apollyonStakeReward:     APYStakeReward,
 
 		Ethash: new(EthashConfig),
 	}
