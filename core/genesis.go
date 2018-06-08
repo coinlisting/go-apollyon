@@ -333,7 +333,7 @@ func DefaultapollyonMainnetGenesisBlock() *Genesis {
 		Nonce:      0,
 		Coinbase:   common.HexToAddress("0xc3F70b10CE5EC4aA47ce44Eb0B7900A883cd45Dd"),
 		Mixhash:    common.HexToHash("0x0000000000000000000000000000000000000000000000000000000000000000"),
-		Alloc:      decodePrealloc(go-apollyonMainnetAllocData),
+		Alloc:      decodePrealloc(apollyonMainnetAllocData),
 	}
 }
 
@@ -360,7 +360,7 @@ func DefaultapollyonTestnetGenesisBlock() *Genesis {
 		Nonce:      0,
 		Coinbase:   common.HexToAddress("0xc3F70b10CE5EC4aA47ce44Eb0B7900A883cd45Dd"),
 		Mixhash:    common.HexToHash("0x0000000000000000000000000000000000000000000000000000000000000000"),
-		Alloc:      decodePrealloc(go-apollyonTestnetAllocData),
+		Alloc:      decodePrealloc(apollyonTestnetAllocData),
 	}
 }
 
