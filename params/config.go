@@ -215,8 +215,8 @@ func (c *ChainConfig) String() string {
 		c.EIP158Block,
 		c.ByzantiumBlock,
 		c.ConstantinopleBlock,
-		c.go-apollyonBlock,
-		c.go-apollyonTreasuryAddress,
+		c.apollyonBlock,
+		c.apollyonTreasuryAddress,
 		engine,
 	)
 }
@@ -251,8 +251,8 @@ func (c *ChainConfig) IsConstantinople(num *big.Int) bool {
 	return isForked(c.ConstantinopleBlock, num)
 }
 
-func (c *ChainConfig) Isgo-apollyon(num *big.Int) bool {
-	return isForked(c.go-apollyonBlock, num)
+func (c *ChainConfig) Isapollyon(num *big.Int) bool {
+	return isForked(c.apollyonBlock, num)
 }
 
 // GasTable returns the gas table corresponding to the current phase (homestead or homestead reprice).
@@ -313,8 +313,8 @@ func (c *ChainConfig) checkCompatible(newcfg *ChainConfig, head *big.Int) *Confi
 	if c.IsEIP158(head) && !configNumEqual(c.ChainId, newcfg.ChainId) {
 		return newCompatError("EIP158 chain ID", c.EIP158Block, newcfg.EIP158Block)
 	}
-	if isForkIncompatible(c.go-apollyonBlock, newcfg.go-apollyonBlock, head) {
-		return newCompatError("go-apollyon fork block", c.go-apollyonBlock, newcfg.go-apollyonBlock)
+	if isForkIncompatible(c.apollyonBlock, newcfg.go-apollyonBlock, head) {
+		return newCompatError("go-apollyon fork block", c.apollyonBlock, newcfg.apollyonBlock)
 	}
 	if isForkIncompatible(c.ByzantiumBlock, newcfg.ByzantiumBlock, head) {
 		return newCompatError("Byzantium fork block", c.ByzantiumBlock, newcfg.ByzantiumBlock)
