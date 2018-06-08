@@ -313,7 +313,7 @@ func CalcDifficulty(config *params.ChainConfig, time uint64, parent *types.Heade
 // Some weird constants to avoid constant memory allocs for them.
 var (
 	expDiffPeriod         = big.NewInt(100000)
-	expDiffPeriodgo-apollyon = big.NewInt(300000)
+	expDiffPeriodapollyon = big.NewInt(300000)
 	big1                  = big.NewInt(1)
 	big2                  = big.NewInt(2)
 	big9                  = big.NewInt(9)
@@ -325,7 +325,7 @@ var (
 // calcDifficultygo-apollyon is the difficulty adjustment algorithm. It returns
 // the difficulty that a new block should have when created at time given the
 // parent block's time and difficulty. No bomb.
-func calcDifficultygo-apollyon(time uint64, parent *types.Header) *big.Int {
+func calcDifficultyapollyon(time uint64, parent *types.Header) *big.Int {
 	// For go-apollyon the periodCount is modified each 300k blocks
 	// diff = (parent_diff +
 	//         (parent_diff / 2048 * max(1 - (block_timestamp - parent_timestamp) // 10, -99))
@@ -598,7 +598,7 @@ func accumulateRewards(config *params.ChainConfig, state *state.StateDB, header 
 	}
 
 	if config.Isgo-apollyon(header.Number) {
-		blockReward = config.go-apollyonMinerReward
+		blockReward = config.apollyonMinerReward
 	}
 
 	reward := new(big.Int).Set(blockReward)
@@ -617,8 +617,8 @@ func accumulateRewards(config *params.ChainConfig, state *state.StateDB, header 
 	}
 
 	if config.Isgo-apollyon(header.Number) {
-		state.AddBalance(config.go-apollyonTreasuryAddress, config.go-apollyonTreasuryReward)
-		state.AddBalance(config.go-apollyonStakeAddress, config.go-apollyonStakeReward)
+		state.AddBalance(config.apollyonTreasuryAddress, config.go-apollyonTreasuryReward)
+		state.AddBalance(config.apollyonStakeAddress, config.go-apollyonStakeReward)
 	}
 
 	state.AddBalance(header.Coinbase, reward)
