@@ -73,7 +73,7 @@ var (
 		CreateBySuicide: 25000,
 	}
 
-	GasTablego-apollyon = GasTable{
+	GasTableapollyon = GasTable{
 		ExtcodeSize: 70000,
 		ExtcodeCopy: 70000,
 		Balance:     40000,
