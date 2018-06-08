@@ -212,8 +212,8 @@ func (g *Genesis) configOrDefault(ghash common.Hash) *params.ChainConfig {
 		return g.Config
 	case ghash == params.MainnetGenesisHash:
 		return params.MainnetChainConfig
-	case ghash == params.apollyonMainnetGenesisHash:
-		return params.apollyonMainnetChainConfig
+	case ghash == params.ApollyonMainnetGenesisHash:
+		return params.ApollyonMainnetChainConfig
 	case ghash == params.TestnetGenesisHash:
 		return params.TestnetChainConfig
 	default:
@@ -325,7 +325,7 @@ func DefaultGenesisBlock() *Genesis {
 // Defaultgo-apollyonMainnetGenesisBlock
 func DefaultapollyonMainnetGenesisBlock() *Genesis {
 	return &Genesis{
-		Config:     params.apollyonMainnetChainConfig,
+		Config:     params.ApollyonMainnetChainConfig,
 		ExtraData:  hexutil.MustDecode("0x0000000000000000000000000000000000000000000000000000000000000000"),
 		GasLimit:   10400000,
 		Difficulty: big.NewInt(524288),
@@ -352,7 +352,7 @@ func DefaultTestnetGenesisBlock() *Genesis {
 // Defaultgo-apollyonTestnetGenesisBlock
 func DefaultapollyonTestnetGenesisBlock() *Genesis {
 	return &Genesis{
-		Config:     params.apollyonTestnetChainConfig,
+		Config:     params.ApollyonTestnetChainConfig,
 		ExtraData:  hexutil.MustDecode("0x0000000000000000000000000000000000000000000000000000000000000000"),
 		GasLimit:   4700000,
 		Difficulty: big.NewInt(524288),
