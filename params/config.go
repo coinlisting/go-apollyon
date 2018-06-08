@@ -24,7 +24,7 @@ import (
 )
 
 var (
-	go-apollyonMainnetGenesisHash = common.HexToHash("0x82270b80fc90beb005505a9ef95039639968a0e81b2904ad30128c93d713d2c9") // go-apollyon Mainnet genesis hash to enforce below configs on
+	apollyonMainnetGenesisHash = common.HexToHash("0x82270b80fc90beb005505a9ef95039639968a0e81b2904ad30128c93d713d2c9") // go-apollyon Mainnet genesis hash to enforce below configs on
 	MainnetGenesisHash         = common.HexToHash("0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3") // Mainnet genesis hash to enforce below configs on
 	TestnetGenesisHash         = common.HexToHash("0x41941023680923e0fe4d74a34bdac8141f2540e3ae90623718e47d66d1ca4a2d") // Testnet genesis hash to enforce below configs on
 )
@@ -65,7 +65,7 @@ var (
 	APYStakeReward, _    = new(big.Int).SetString("30000000000000000", 10)
 
 	// go-apollyonMainnetChainConfig contains the chain parameters to run a node on the go-apollyon Main network.
-	go-apollyonMainnetChainConfig = &ChainConfig{
+	apollyonMainnetChainConfig = &ChainConfig{
 		ChainId:                 big.NewInt(777999),
 		HomesteadBlock:          big.NewInt(0),
 		DAOForkBlock:            nil,
@@ -164,12 +164,12 @@ type ChainConfig struct {
 	ByzantiumBlock      *big.Int `json:"byzantiumBlock,omitempty"`      // Byzantium switch block (nil = no fork, 0 = already on byzantium)
 	ConstantinopleBlock *big.Int `json:"constantinopleBlock,omitempty"` // Constantinople switch block (nil = no fork, 0 = already activated)
 
-	go-apollyonBlock           *big.Int       `json:"go-apollyonBlock,omitempty"`
-	go-apollyonMinerReward     *big.Int       `json:"go-apollyonMinerReward,omitempty"`
-	go-apollyonTreasuryAddress common.Address `json:"go-apollyonTreasuryAddress,omitempty"`
-	go-apollyonTreasuryReward  *big.Int       `json:"go-apollyonTreasuryReward,omitempty"`
-	go-apollyonStakeAddress    common.Address `json:"go-apollyonStakeAddress,omitempty"`
-	go-apollyonStakeReward     *big.Int       `json:"go-apollyonStakeReward,omitempty"`
+	apollyonBlock           *big.Int       `json:"go-apollyonBlock,omitempty"`
+	apollyonMinerReward     *big.Int       `json:"go-apollyonMinerReward,omitempty"`
+	apollyonTreasuryAddress common.Address `json:"go-apollyonTreasuryAddress,omitempty"`
+	apollyonTreasuryReward  *big.Int       `json:"go-apollyonTreasuryReward,omitempty"`
+	apollyonStakeAddress    common.Address `json:"go-apollyonStakeAddress,omitempty"`
+	apollyonStakeReward     *big.Int       `json:"go-apollyonStakeReward,omitempty"`
 	// Various consensus engines
 	Ethash *EthashConfig `json:"ethash,omitempty"`
 	Clique *CliqueConfig `json:"clique,omitempty"`
