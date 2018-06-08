@@ -358,7 +358,7 @@ func calcDifficultyapollyon(time uint64, parent *types.Header) *big.Int {
 	}
 	// for the exponential factor
 	periodCount := new(big.Int).Add(parent.Number, big1)
-	periodCount.Div(periodCount, expDiffPeriodgo-apollyon)
+	periodCount.Div(periodCount, expDiffPeriodapollyon)
 
 	// the exponential factor, commonly referred to as "the bomb"
 	// diff = diff + 2^(periodCount - 2)
@@ -597,8 +597,8 @@ func accumulateRewards(config *params.ChainConfig, state *state.StateDB, header 
 		blockReward = ByzantiumBlockReward
 	}
 
-	if config.Isgo-apollyon(header.Number) {
-		blockReward = config.apollyonMinerReward
+	if config.Isapollyon(header.Number) {
+		blockReward = config.ApollyonMinerReward
 	}
 
 	reward := new(big.Int).Set(blockReward)
@@ -616,9 +616,9 @@ func accumulateRewards(config *params.ChainConfig, state *state.StateDB, header 
 		reward.Add(reward, r)
 	}
 
-	if config.Isgo-apollyon(header.Number) {
-		state.AddBalance(config.apollyonTreasuryAddress, config.apollyonTreasuryReward)
-		state.AddBalance(config.apollyonStakeAddress, config.apollyonStakeReward)
+	if config.Isapollyon(header.Number) {
+		state.AddBalance(config.ApollyonTreasuryAddress, config.ApollyonTreasuryReward)
+		state.AddBalance(config.ApollyonStakeAddress, config.ApollyonStakeReward)
 	}
 
 	state.AddBalance(header.Coinbase, reward)
