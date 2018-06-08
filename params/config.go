@@ -313,7 +313,7 @@ func (c *ChainConfig) checkCompatible(newcfg *ChainConfig, head *big.Int) *Confi
 	if c.IsEIP158(head) && !configNumEqual(c.ChainId, newcfg.ChainId) {
 		return newCompatError("EIP158 chain ID", c.EIP158Block, newcfg.EIP158Block)
 	}
-	if isForkIncompatible(c.apollyonBlock, newcfg.go-apollyonBlock, head) {
+	if isForkIncompatible(c.apollyonBlock, newcfg.apollyonBlock, head) {
 		return newCompatError("go-apollyon fork block", c.apollyonBlock, newcfg.apollyonBlock)
 	}
 	if isForkIncompatible(c.ByzantiumBlock, newcfg.ByzantiumBlock, head) {
