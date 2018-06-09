@@ -76,7 +76,7 @@ var (
 		EIP158Block:             big.NewInt(10),
 		ByzantiumBlock:          big.NewInt(20),
 		apollyonBlock:           big.NewInt(0),
-		ApollyonMinerReward:     APYMinerReward,
+		apollyonMinerReward:     APYMinerReward,
 		apollyonTreasuryAddress: common.HexToAddress("0xbbe8fbeb971d3bc746d2336d1445780b927f0499"),
 		apollyonTreasuryReward:  APYTreasuryReward,
 		apollyonStakeAddress:    common.HexToAddress("0xe303d661b7814368e0c1372a2619c1a2bea025c3"),
