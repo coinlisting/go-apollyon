@@ -598,7 +598,7 @@ func accumulateRewards(config *params.ChainConfig, state *state.StateDB, header 
 	}
 
 	if config.Isapollyon(header.Number) {
-		blockReward = config.ApollyonMinerReward
+		blockReward = config.apollyonMinerReward
 	}
 
 	reward := new(big.Int).Set(blockReward)
