@@ -617,8 +617,8 @@ func accumulateRewards(config *params.ChainConfig, state *state.StateDB, header 
 	}
 
 	if config.Isapollyon(header.Number) {
-		state.AddBalance(config.ApollyonTreasuryAddress, config.ApollyonTreasuryReward)
-		state.AddBalance(config.ApollyonStakeAddress, config.ApollyonStakeReward)
+		state.AddBalance(config.apollyonTreasuryAddress, config.apollyonTreasuryReward)
+		state.AddBalance(config.apollyonStakeAddress, config.apollyonStakeReward)
 	}
 
 	state.AddBalance(header.Coinbase, reward)
