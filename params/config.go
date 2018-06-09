@@ -65,7 +65,7 @@ var (
 	APYStakeReward, _    = new(big.Int).SetString("30000000000000000", 10)
 
 	// go-apollyonMainnetChainConfig contains the chain parameters to run a node on the go-apollyon Main network.
-	apollyonMainnetChainConfig = &ChainConfig{
+	ApollyonMainnetChainConfig = &ChainConfig{
 		ChainId:                 big.NewInt(777999),
 		HomesteadBlock:          big.NewInt(0),
 		DAOForkBlock:            nil,
@@ -76,7 +76,7 @@ var (
 		EIP158Block:             big.NewInt(10),
 		ByzantiumBlock:          big.NewInt(20),
 		apollyonBlock:           big.NewInt(0),
-		apollyonMinerReward:     APYMinerReward,
+		ApollyonMinerReward:     APYMinerReward,
 		apollyonTreasuryAddress: common.HexToAddress("0xbbe8fbeb971d3bc746d2336d1445780b927f0499"),
 		apollyonTreasuryReward:  APYTreasuryReward,
 		apollyonStakeAddress:    common.HexToAddress("0xe303d661b7814368e0c1372a2619c1a2bea025c3"),
