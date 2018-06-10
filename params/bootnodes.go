@@ -55,6 +55,8 @@ var DiscoveryV5Bootnodes = []string{
 
 var apollyonMainnetBootnodes = []string{
 	"enode://75abd0dfe54f953b5bc75c304aaf1058e387df0bff91b80705540fb7917190c4025d13abee2f5b749b511702bcce9d33a319a4ed3b022862e90bd46f58bdd1af@95.179.143.125:30303",
+	"enode://bf58db87e2e813ba3558dfbdb4167c83f86a0740d41c2cda4905d385012a47eafa6a95febf4fd6a3158515512e739ff3abf78d015d6463ca50adcfb5eafac41f@199.247.14.203:30303",
+	
 }
 
 
